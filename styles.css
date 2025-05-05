@@ -130,7 +130,52 @@ body {
     color: #CA9285;
     margin-top: 1vw;
   }
+
+  .date-with-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 0;
+  }
   
+  .date-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 2vw; /* Adjust the gap between buttons */
+  }
+  
+  .calendar-button {
+    background-color: white;
+    border-radius: 3vw;
+    width: 20vw;
+    height: 5vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .calendar-button img {
+    width: 3vw;
+    height: 3vw;
+  }
+  
+  .calendar-button:hover {
+    transform: scale(1.1);
+  }
+
   .timeline {
     display: flex;
     justify-content: space-between;
@@ -237,6 +282,7 @@ body {
   
   .gallery-container {
     position: relative;
+    width: 100%;
     overflow: hidden;
   }
   
@@ -245,7 +291,7 @@ body {
     scroll-snap-type: x mandatory;
     overflow-x: auto;
     scroll-behavior: smooth;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   /* Polaroid-style white frame */
@@ -332,7 +378,7 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     padding: 0.5vw 1vw;
     cursor: pointer;
     z-index: 1001;
@@ -355,7 +401,7 @@ body {
   .lightbox .close {
     position: absolute;
     top: 2vw; right: 4vw;
-    font-size: 3vw;
+    font-size: 6vw;
     color: white;
     cursor: pointer;
   }
@@ -364,7 +410,7 @@ body {
     position: fixed;
     bottom: 4vw;
     right: 2vw;
-    z-index: 999;
+    z-index: 99;
     transition: all 0.5s ease;
   }
   .rsvp.centered {
@@ -400,7 +446,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 0.8vw 0;
-    z-index: 998;
+    z-index: 98;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   }
   
@@ -415,6 +461,34 @@ body {
   @media (max-width: 600px) {
     .bottom-nav a {
       font-size: 2vw;
+    }
+    .arrow {
+      font-size: 4vw;
+      padding: 1.5vw 2vw;
+    }
+    .lightbox-arrow {
+      font-size: 4vw;
+      padding: 1.5vw 2vw;
+    }
+    .lightbox .close {
+      font-size: 10vw;
+    }
+    .photo-frame.landscape {
+      width: 40vw; /* Smaller width for landscape frames on mobile */
+      height: 30vw; /* Adjust height proportionally */
+    }
+  
+    .photo-frame.portrait {
+      width: 30vw; /* Smaller width for portrait frames on mobile */
+      height: 40vw; /* Adjust height proportionally */
+    }
+    /* Optionally reduce padding and margins */
+    .photo-frame {
+      padding: 2vw; /* More space between the image and frame */
+      margin: 0 2vw; /* Adjust margin for better spacing */
+    }
+    .th {
+      font-size: 2.5vw;
     }
   }
   

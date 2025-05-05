@@ -48,9 +48,29 @@
   </section>
 
   <!-- Date Section -->
-  <section class="date" id="schedule">
-    <p class="animate-on-scroll" style="margin-bottom: 0;">Friday</p>
-    <h3 class="animate-on-scroll" style="margin-top: 0;">18 July 2025</p>
+  <section class="date-with-buttons" id="schedule">
+    <!-- Date Content -->
+    <div class="date-content">
+      <p class="animate-on-scroll" style="margin-bottom: 0;">Friday</p>
+      <h3 class="animate-on-scroll" style="margin-top: 0; margin-bottom: 1vw;">18 July 2025</h3>
+    </div>
+
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+      <p style="margin-top: 1.3vw;">Add to calendar: </p>
+      <!-- Left Button (Google Calendar) -->
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Bee+%26+Peach%27s+Wedding&dates=20250718T080000Z/20250718T150000Z&details=Join+the+celebration!&location=Novio"
+        target="_blank"
+        class="calendar-button left">
+        <img src="img/google.png" alt="Google Calendar">
+        <p>&nbsp;&nbsp;Google</p>
+      </a>
+      <!-- Right Button (.ICS) -->
+      <a href="beepeachwedding.ics" download class="calendar-button right">
+        <img src="img/othercal.png" alt="Apple/Outlook Calendar">
+        <p>&nbsp;&nbsp;Other</p>
+      </a>
+    </div>
   </section>
 
   <section class="timeline-section">
