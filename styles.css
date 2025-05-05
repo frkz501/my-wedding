@@ -1,0 +1,423 @@
+@font-face {
+  font-family: 'MADE Mirage';
+  src: url('MADE Mirage Regular PERSONAL USE.otf') format('opentype');
+}
+body {
+    font-family: 'MADE Mirage', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FDF9EE;
+    letter-spacing: 0.3vw;
+    text-transform: uppercase;  /* Makes all text uppercase */
+    font-size: 2vw;
+    color: #897363;
+  }
+
+  .th {
+    font-family: 'Kanit'!important;
+    letter-spacing: normal;
+  }
+  
+/* Common style for hidden elements */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(3vw); /* slight offset for float effect */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  /* When the element becomes visible */
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%; /* Aspect ratio (16:9) */
+    overflow: hidden;
+}
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* Position it absolutely within the banner */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the image stays behind the text */
+  }
+
+  .couple-names {
+    position: absolute;
+    font-size: 8vw;
+    color: #8E573F;
+    z-index: 1; /* Make sure the text appears above the image */
+  }
+
+  .couple-names.b {
+    top: 7%;
+    left: 68.8%;
+  }
+
+  .couple-names.p {
+    top: 14%;
+    left: 70.3%;
+  }
+  
+  /* Override default scroll animation just for .couple-names */
+  .couple-names.animate-on-scroll {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 3vw)); /* shift down 30px */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .couple-names.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* return to true center */
+  }
+
+  .mono-date {
+    position: absolute;
+    top: 13%;
+    left: 74.6%;
+    color: #8E573F;
+    letter-spacing: 0.1vw;
+  }
+
+  .nickname {
+    color: #CA9285;
+    font-size: 4vw;
+    letter-spacing: 0.8vw;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 2vw;
+  }
+
+  .andSign {
+    padding-top: 14vw;
+  }
+
+  .andSign img {
+    height: 7vw;
+    width: auto;
+  }
+  
+  section {
+    padding: 2vw;
+    text-align: center;
+  }
+  
+  .couple-photos {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  
+  .photo-container {
+    text-align: center;
+  }
+  
+  .photo-container img {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+  }
+  
+  .name {
+    color: #CA9285;
+    margin-top: 1vw;
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 2vw;
+    padding-top: 6vw;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 7vw;
+    left: 12vw;
+    right: 12vw;
+    height: 0.2vw;
+    background-color: #8E573F;
+    z-index: 1;
+  }
+  
+  .timeline-event {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: auto; /* or auto-adjust */
+  }
+
+  .timeline-icon {
+    width: 6vw;
+    height: 6vw;
+    object-fit: contain;
+    position: absolute;
+    top: -7vw;
+    /* left: 50%; */
+    transform: translateX(-50%);
+  }
+  
+  .dot {
+    width: 1.3vw;
+    height: 1.3vw;
+    background-color: #8E573F;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    border: 0.3vw solid white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  }
+  
+  .time, .label {
+    margin-top: 1vw;
+  }
+
+  .hashtag-theme {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 2vw; /* space between label, hashtag, and image */
+    flex-wrap: wrap;
+  }
+
+  .hashtag-theme .hashtag {
+    color: #ff9a8b;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2.5vw;
+  }
+
+  .hashtag-theme .hashtag:hover {
+    text-decoration: underline;
+  }
+
+  .theme-color-group {
+    display: flex;
+    gap: 1vw;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+  }
+
+  .theme-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .color-circle {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+  }
+  
+  .color-label {
+    margin-top: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+
+  .gallery-section {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 2vw auto;
+  }
+  
+  .gallery-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-track {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: center;
+  }
+  
+  /* Polaroid-style white frame */
+  .photo-frame {
+    background: white;
+    padding: 0.5vw;
+    margin: 0 1vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Set fixed sizes based on orientation */
+  .photo-frame.landscape {
+    width: 16vw;
+    height: 12vw;
+  }
+
+  .photo-frame.portrait {
+    width: 12vw;
+    height: 16vw;
+  }
+
+  .gallery-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+  }
+  
+  .gallery-container:hover .arrow {
+    display: block;
+  }
+  
+  .arrow.left {
+    left: 1.5vw;
+  }
+  
+  .arrow.right {
+    right: 1.5vw;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    z-index: 1001;
+    transition: background 0.3s;
+  }
+  
+  .lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .lightbox-arrow.left {
+    left: 3vw;
+  }
+  
+  .lightbox-arrow.right {
+    right: 3vw;
+  }
+  
+  
+  .lightbox .close {
+    position: absolute;
+    top: 2vw; right: 4vw;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .rsvp {
+    position: fixed;
+    bottom: 4vw;
+    right: 2vw;
+    z-index: 999;
+    transition: all 0.5s ease;
+  }
+  .rsvp.centered {
+    left: 50%;
+    bottom: 6vw; /* offset above the message */
+    transform: translateX(-50%);
+    right: auto;
+  }
+  .rsvp-btn {
+    background-color: #ff9a8b;
+    color: white;
+    padding: 1.5vw 2vw;
+    border-radius: 1vw;
+    text-decoration: none;
+    font-size: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .rsvp-btn:hover {
+    background-color: #ff6f5e;
+    transform: scale(1.05);
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.8vw 0;
+    z-index: 998;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .bottom-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5vw;
+    transition: color 0.3s;
+  }
+
+  @media (max-width: 600px) {
+    .bottom-nav a {
+      font-size: 2vw;
+    }
+  }
+  
+  .bottom-nav a:hover {
+    color: #ff9a8b; /* Your theme color */
+  }
