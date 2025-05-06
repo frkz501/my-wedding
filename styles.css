@@ -1,23 +1,50 @@
 @font-face {
   font-family: 'MADE Mirage';
   src: url('MADE Mirage Regular PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
 }
+@font-face {
+  font-family: 'MADE Mirage';
+  src: url('MADE Mirage Medium PERSONAL USE.otf') format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MADE Mirage';
+  src: url('MADE Mirage Bold PERSONAL USE.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Hyogo';
+  src: url('Hyogo-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hyogo';
+  src: url('Hyogo-Black.ttf') format('truetype');
+  font-weight: bold;
+}
+
 body {
-    font-family: 'MADE Mirage', serif;
+    font-family: 'Hyogo', serif;
     margin: 0;
     padding: 0;
     background-color: #FDF9EE;
     letter-spacing: 0.5vw;
-    text-transform: uppercase;  /* Makes all text uppercase */
-    font-size: 4vw;
+    text-transform: uppercase;
+    font-size: 3.5vw;
     color: #6f5542;
+    font-weight: normal;
+  }
+
+  h1, h2, h3 {
+    font-family: 'MADE Mirage';
   }
 
   .th {
     font-family: 'Noto Sans Thai'!important;
     letter-spacing: normal;
     font-weight: 200!important;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   
 /* Common style for hidden elements */
@@ -53,7 +80,9 @@ body {
 
   .couple-names {
     position: absolute;
+    font-family: 'MADE Mirage';
     font-size: 10vw;
+    font-weight: 400!important;
     color: #8E573F;
     z-index: 1; /* Make sure the text appears above the image */
   }
@@ -81,6 +110,8 @@ body {
   }
 
   .mono-date {
+    font-family: 'MADE Mirage';
+    font-weight: normal;
     position: absolute;
     top: 22%;
     left: 63%;
@@ -242,6 +273,10 @@ body {
     margin-bottom: 0;
   }
 
+  .time {
+    font-family: 'MADE Mirage';
+  }
+
   .label {
     font-size: 2vw;
   }
@@ -257,6 +292,8 @@ body {
 
   .hashtag-theme .hashtag {
     color: #ff9a8b;
+    font-family: 'Playfair Display SC';
+    text-transform: none;
     font-weight: bold;
     text-decoration: none;
   }
