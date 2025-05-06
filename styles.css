@@ -459,6 +459,9 @@ body {
   }
 
   @media (max-width: 600px) {
+    body {
+      font-size: 3vw;
+    }
     .bottom-nav a {
       font-size: 2vw;
     }
@@ -469,6 +472,10 @@ body {
     .lightbox-arrow {
       font-size: 4vw;
       padding: 1.5vw 2vw;
+    }
+    .lightbox-content {
+      max-width: 80%;
+      max-height: 80%;
     }
     .lightbox .close {
       font-size: 10vw;

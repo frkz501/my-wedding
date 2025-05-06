@@ -113,3 +113,13 @@ const observer = new IntersectionObserver(entries => {
   threshold: 0.5
 });
 observer.observe(rsvpSpace);
+
+// check mobile or tablet then hide arrow
+const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (isMobileOrTablet) {
+  // Hide elements with the class "arrow"
+  document.querySelectorAll('.arrow').forEach(el => {
+    el.style.display = 'none';
+  });
+}
