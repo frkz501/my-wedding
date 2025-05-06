@@ -252,7 +252,7 @@ body {
     gap: 1vw;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 2vw;
+    /* margin-top: 2vw; */
   }
 
   .theme-color {
@@ -271,6 +271,7 @@ body {
     margin-top: 1vw;
     font-size: 1.5vw;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .gallery-section {
@@ -397,7 +398,6 @@ body {
     right: 3vw;
   }
   
-  
   .lightbox .close {
     position: absolute;
     top: 2vw; right: 4vw;
@@ -458,9 +458,25 @@ body {
     transition: color 0.3s;
   }
 
+  .bottom-nav a:hover {
+    color: #ff9a8b; /* Your theme color */
+  }
+
   @media (max-width: 600px) {
     body {
       font-size: 3vw;
+    }
+    .calendar-button.left {
+      width: 25vw;
+    }
+    .hashtag-theme .hashtag {
+      font-size: 3.5vw;
+    }
+    .hashtag-theme h3 {
+      margin: 0;
+    }
+    .color-label {
+      font-size: 2vw;
     }
     .bottom-nav a {
       font-size: 2vw;
@@ -495,10 +511,6 @@ body {
       margin: 0 2vw; /* Adjust margin for better spacing */
     }
     .th {
-      font-size: 2.5vw;
+      font-size: 3vw;
     }
-  }
-  
-  .bottom-nav a:hover {
-    color: #ff9a8b; /* Your theme color */
   }
