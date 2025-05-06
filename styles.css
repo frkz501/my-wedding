@@ -7,17 +7,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FDF9EE;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.5vw;
     text-transform: uppercase;  /* Makes all text uppercase */
-    font-size: 2vw;
-    color: #897363;
+    font-size: 4vw;
+    color: #6f5542;
   }
 
   .th {
     font-family: 'Noto Sans Thai'!important;
     letter-spacing: normal;
     font-weight: 200!important;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
   
 /* Common style for hidden elements */
@@ -53,19 +53,19 @@ body {
 
   .couple-names {
     position: absolute;
-    font-size: 8vw;
+    font-size: 10vw;
     color: #8E573F;
     z-index: 1; /* Make sure the text appears above the image */
   }
 
   .couple-names.b {
-    top: 7%;
-    left: 68.8%;
+    top: 1%;
+    left: 72.8%;
   }
 
   .couple-names.p {
-    top: 14%;
-    left: 70.3%;
+    top: 10%;
+    left: 75.3%;
   }
   
   /* Override default scroll animation just for .couple-names */
@@ -82,27 +82,29 @@ body {
 
   .mono-date {
     position: absolute;
-    top: 13%;
-    left: 74.6%;
+    top: 22%;
+    left: 63%;
     color: #8E573F;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.2vw;
+    font-size: 4vw;
   }
 
   .nickname {
     color: #CA9285;
-    font-size: 4vw;
-    letter-spacing: 0.8vw;
+    font-size: 6vw;
+    letter-spacing: 1.6vw;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 2vw;
   }
 
   .andSign {
-    padding-top: 14vw;
+    justify-content: center;
+    align-content: center;
   }
 
   .andSign img {
-    height: 7vw;
+    height: 6vw;
     width: auto;
   }
   
@@ -124,8 +126,8 @@ body {
   
   .photo-container img {
     border-radius: 50%;
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
   }
   
   .name {
@@ -153,12 +155,12 @@ body {
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     gap: 2vw; /* Adjust the gap between buttons */
+    font-size: 3vw;
   }
   
   .calendar-button {
     background-color: white;
     border-radius: 3vw;
-    width: 20vw;
     height: 5vw;
     display: inline-flex;
     align-items: center;
@@ -167,6 +169,14 @@ body {
     transition: transform 0.2s ease;
     color: black;
     text-decoration: none;
+  }
+
+  .calendar-button.left {
+    width: 25vw;
+  }
+
+  .calendar-button.right {
+    width: 20vw;
   }
   
   .calendar-button img {
@@ -184,6 +194,7 @@ body {
     position: relative;
     padding: 2vw;
     padding-top: 6vw;
+    font-size: 3vw;
   }
   
   .timeline::before {
@@ -228,6 +239,11 @@ body {
   
   .time, .label {
     margin-top: 1vw;
+    margin-bottom: 0;
+  }
+
+  .label {
+    font-size: 2vw;
   }
 
   .hashtag-theme {
@@ -236,22 +252,26 @@ body {
     align-items: center;
     gap: 2vw; /* space between label, hashtag, and image */
     flex-wrap: wrap;
+    margin-top: 4vw;
   }
 
   .hashtag-theme .hashtag {
     color: #ff9a8b;
     font-weight: bold;
     text-decoration: none;
-    font-size: 2.5vw;
   }
 
   .hashtag-theme .hashtag:hover {
     text-decoration: underline;
   }
 
+  .hashtag-theme h3 {
+    margin: 0;
+  }
+
   .theme-color-group {
     display: flex;
-    gap: 1vw;
+    gap: 2vw;
     align-items: flex-start;
     flex-wrap: wrap;
     /* margin-top: 2vw; */
@@ -264,14 +284,14 @@ body {
   }
   
   .color-circle {
-    width: 3vw;
-    height: 3vw;
+    width: 6vw;
+    height: 6vw;
     border-radius: 50%;
   }
   
   .color-label {
     margin-top: 1vw;
-    font-size: 1.5vw;
+    font-size: 2vw;
     text-align: center;
     margin-bottom: 0;
   }
@@ -427,7 +447,7 @@ body {
     padding: 1.5vw 2vw;
     border-radius: 1vw;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
   }
@@ -466,16 +486,13 @@ body {
 
   @media (max-width: 600px) {
     body {
-      font-size: 3vw;
+      font-size: 5vw;
+    }
+    .nickname {
+      font-size: 8vw;
     }
     .calendar-button.left {
       width: 23vw;
-    }
-    .hashtag-theme .hashtag {
-      font-size: 3.5vw;
-    }
-    .hashtag-theme h3 {
-      margin: 0;
     }
     .color-label {
       font-size: 2vw;
@@ -513,6 +530,6 @@ body {
       margin: 0 2vw; /* Adjust margin for better spacing */
     }
     .th {
-      font-size: 3vw;
+      font-size: 4.5vw;
     }
   }
