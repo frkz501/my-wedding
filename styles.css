@@ -569,4 +569,9 @@ body {
     .th {
       font-size: 4.5vw;
     }
+    .rsvp-btn {
+      font-size: 5vw;
+      padding: 1.7vw 2.3vw;
+      border-radius: 1.5vw;
+    }
   }
