@@ -522,13 +522,13 @@ body {
       font-size: 10vw;
     }
     .photo-frame.landscape {
-      width: 40vw; /* Smaller width for landscape frames on mobile */
-      height: 30vw; /* Adjust height proportionally */
+      width: 80vw; /* Smaller width for landscape frames on mobile */
+      height: 60vw; /* Adjust height proportionally */
     }
   
     .photo-frame.portrait {
-      width: 30vw; /* Smaller width for portrait frames on mobile */
-      height: 40vw; /* Adjust height proportionally */
+      width: 60vw; /* Smaller width for portrait frames on mobile */
+      height: 80vw; /* Adjust height proportionally */
     }
     /* Optionally reduce padding and margins */
     .photo-frame {
