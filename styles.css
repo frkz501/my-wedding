@@ -495,7 +495,7 @@ body {
       margin-bottom: 2vw;
     }
     .nickname {
-      font-size: 8vw;
+      font-size: 6vw;
     }
     .calendar-button.left {
       width: 23vw;
@@ -536,10 +536,10 @@ body {
       margin: 0 2vw; /* Adjust margin for better spacing */
     }
     .th {
-      font-size: 4.5vw;
+      font-size: 4vw;
     }
     .rsvp-btn {
-      font-size: 5vw;
+      font-size: 4vw;
       padding: 1.7vw 2.3vw;
       border-radius: 1.5vw;
     }
