@@ -14,8 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // script for LINE in-app browser calendar
-const isLineBrowser = /Line/i.test(navigator.userAgent);
-  if (isLineBrowser) {
-    // Change the button’s link only in LINE browser
-    document.getElementById("calendar-button").href = "calendar-redirect.html?openExternalBrowser=1";
-  }
+function isLINEBrowser() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return userAgent.includes('line/') || 
+           userAgent.includes('lineapp') ||
+           userAgent.includes('line app') ||
+           (userAgent.includes('wv') && userAgent.includes('line'));
+}
+
+const isLINE = isLINEBrowser();
+if (isLINE) {
+  // Redirect to external browser with calendar download page
+  document.getElementById("ics").href = "calendar-redirect.html?openExternalBrowser=1";
+}
