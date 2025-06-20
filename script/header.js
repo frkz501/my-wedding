@@ -17,5 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
 const isLineBrowser = /Line/i.test(navigator.userAgent);
   if (isLineBrowser) {
     // Change the button’s link only in LINE browser
-    document.getElementById("calendar-button").href = "calendar-redirect.html";
+    document.getElementById("calendar-button").href = "calendar-redirect.html?openExternalBrowser=1";
   }
