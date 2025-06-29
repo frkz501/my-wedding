@@ -105,8 +105,10 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       rsvpBtnWrapper.classList.add('centered');
+      rsvpBtnWrapper.classList.add('hide-bubble');
     } else {
       rsvpBtnWrapper.classList.remove('centered');
+      rsvpBtnWrapper.classList.remove('hide-bubble');
     }
   });
 }, {

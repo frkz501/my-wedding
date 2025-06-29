@@ -436,12 +436,17 @@ body {
     right: 2vw;
     z-index: 99;
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align both bubble and button to right */
+    gap: 8px;
   }
   .rsvp.centered {
     left: 50%;
     bottom: 6vw; /* offset above the message */
     transform: translateX(-50%);
     right: auto;
+    align-items: center;
   }
   .rsvp-btn {
     background-color: #ff9a8b;
@@ -457,6 +462,51 @@ body {
   .rsvp-btn:hover {
     background-color: #ff6f5e;
     transform: scale(1.05);
+  }
+
+  .speech-bubble {
+    opacity: 1;
+    background-color: #f2ca52;
+    letter-spacing: 2px;
+    color: black;
+    padding: 5px 7px;
+    border-radius: 9px;
+    position: relative;
+    font-size: 14px;
+    font-family: serif;
+    white-space: nowrap;
+    max-width: 500px;
+    line-height: 1.4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: wiggle 2.5s infinite;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(1deg); }
+    30% { transform: rotate(-1deg); }
+    45% { transform: rotate(1deg); }
+    60% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  /* Speech bubble triangle */
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 10px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #f2ca52;
+    box-shadow: none;
+  }
+  /* Hide speech bubble at bottom */
+  .rsvp.hide-bubble .speech-bubble {
+    opacity: 0;
   }
   
   .bottom-nav {
@@ -478,7 +528,7 @@ body {
     color: #333;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.5vw;
+    font-size: 2.6vw;
     transition: color 0.3s;
   }
 
@@ -504,7 +554,7 @@ body {
       font-size: 2vw;
     }
     .bottom-nav a {
-      font-size: 2vw;
+      font-size: 2.5vw;
     }
     .arrow {
       font-size: 4vw;
@@ -542,5 +592,11 @@ body {
       font-size: 4vw;
       padding: 1.7vw 2.3vw;
       border-radius: 1.5vw;
+    }
+    .speech-bubble {
+      font-size: 2vw;
+      border-radius: 1.5vw;
+      padding: 1vw 1.5vw;
+      letter-spacing: 0.3vw;
     }
   }
